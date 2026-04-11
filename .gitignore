@@ -1,5 +1,29 @@
-build/
-*.iso
-*.img
+# live-build artifacts
+config/live-build/.build/
+config/live-build/chroot/
+config/live-build/binary/
+config/live-build/cache/
+
+# live-build generated config (IMPORTANT)
+config/live-build/config/*
+
+# BUT keep your package lists
+!config/live-build/config/package-lists/
+!config/live-build/config/package-lists/**
+
+# outputs
+config/live-build/*.iso
+config/live-build/*.img
+config/live-build/live-image-*
+
+# metadata
+config/live-build/*.files
+config/live-build/*.packages
+config/live-build/*.contents
+
+# generic
 *.log
-.cache/
+*.tmp
+
+config/live-build/*.modified_timestamps
+config/live-build/chroot.*
