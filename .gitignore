@@ -1,29 +1,54 @@
+# =========================
 # live-build artifacts
+# =========================
 config/live-build/.build/
 config/live-build/chroot/
 config/live-build/binary/
 config/live-build/cache/
 
-# live-build generated config (IMPORTANT)
-config/live-build/config/*
-
-# BUT keep your package lists
-!config/live-build/config/package-lists/
-!config/live-build/config/package-lists/**
-
-# outputs
+# =========================
+# generated outputs
+# =========================
 config/live-build/*.iso
 config/live-build/*.img
 config/live-build/live-image-*
 
-# metadata
+# =========================
+# build metadata
+# =========================
 config/live-build/*.files
 config/live-build/*.packages
 config/live-build/*.contents
-
-# generic
-*.log
-*.tmp
-
 config/live-build/*.modified_timestamps
 config/live-build/chroot.*
+
+# =========================
+# generated config (IGNORE TODO)
+# =========================
+config/live-build/config/*
+
+# =========================
+# KEEP only what YOU define
+# =========================
+
+# package lists
+!config/live-build/config/package-lists/
+!config/live-build/config/package-lists/**
+
+# includes (rootfs customization)
+!config/live-build/config/includes.chroot/
+!config/live-build/config/includes.chroot/**
+
+# hooks → ignorar TODO
+config/live-build/config/hooks/*
+
+# permitir SOLO tu hook específico
+!config/live-build/config/hooks/live/
+!config/live-build/config/hooks/live/01-root-password.hook.chroot
+
+# =========================
+# generic
+# =========================
+*.log
+*.tmp
+.DS_Store
