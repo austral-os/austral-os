@@ -20,10 +20,8 @@ libwoff1
 
 wayfire
 labwc
-weston
 
 libneatvnc0
-libweston-14-0
 libwpe-1.0-1
 
 libseat1
@@ -64,5 +62,8 @@ bluez-tools
 rfkill
 pipewire
 pipewire-audio
+pipewire-pulse
 wireplumber
+alsa-utils
+libspa-0.2-modules
 libspa-0.2-bluetooth
