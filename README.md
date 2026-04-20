@@ -15,6 +15,7 @@ Stage 0 — Project initialization
 
 ## Ejemplo
 
+cd config/live-build
 sudo lb clean --all
 sudo lb config
 sudo lb build 2>&1 | tee build.log
