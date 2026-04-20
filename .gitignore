@@ -49,6 +49,7 @@ config/live-build/config/hooks/*
 # =========================
 # generic
 # =========================
+*.deb
 *.log
 *.tmp
 .DS_Store
