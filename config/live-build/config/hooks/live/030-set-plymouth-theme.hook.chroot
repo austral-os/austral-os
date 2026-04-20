@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+# Ensure plymouth-set-default-theme is available
+if [ -x /usr/sbin/plymouth-set-default-theme ]; then
+    echo "Setting Plymouth theme to austral..."
+    plymouth-set-default-theme austral
+else
+    echo "Warning: plymouth-set-default-theme not found. Is plymouth installed?"
+fi
+
+# Update initramfs to incorporate the theme
+update-initramfs -u
