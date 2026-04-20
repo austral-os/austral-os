@@ -8,6 +8,8 @@ PAMName=login
 Environment=XDG_RUNTIME_DIR=/run/user/0
 ExecStartPre=/usr/bin/audio-init.sh
 ExecStart=/usr/bin/start-horizon-session-labwc.sh
+ExecStartPost=/usr/bin/bash -c "sleep 3 && /usr/bin/plymouth quit"
+StandardOutput=null
 Restart=always
 
 [Install]

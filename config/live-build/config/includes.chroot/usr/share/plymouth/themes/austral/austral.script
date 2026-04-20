@@ -16,7 +16,7 @@ logo.sprite.SetPosition(logo.x, logo.y, 1000);
 progress_bar.width = 300;
 progress_bar.height = 4;
 progress_bar.x = Window.GetWidth() / 2 - progress_bar.width / 2;
-progress_bar.y = logo.y + logo.image.GetHeight() + 50; # 50px below the logo
+progress_bar.y = logo.y + logo.image.GetHeight() + 50;
 
 # Load 1x1 blocks for the bar
 white_image = Image("white.png");
@@ -30,18 +30,47 @@ progress_bar_bg.sprite.SetPosition(progress_bar.x, progress_bar.y, 50);
 progress_bar.sprite = Sprite();
 progress_bar.sprite.SetPosition(progress_bar.x, progress_bar.y, 100);
 
+# Global progress variable
+global.progress = 0;
+
 # Update bar width based on boot progress
-fun progress_callback (duration, progress)
+fun update_ui ()
   {
-    if (progress > 0)
+    if (global.progress > 0)
       {
-        current_width = progress_bar.width * progress;
+        current_width = progress_bar.width * global.progress;
         if (current_width < 1) current_width = 1;
+        if (current_width > progress_bar.width) current_width = progress_bar.width;
+        
         progress_bar.sprite.SetImage(white_image.Scale(current_width, progress_bar.height));
       }
   }
 
+# System updates the progress
+fun progress_callback (duration, progress)
+  {
+    if (progress > global.progress)
+      {
+        global.progress = progress;
+        update_ui();
+      }
+  }
+
 Plymouth.SetBootProgressFunction(progress_callback);
+
+# Smooth auto-increment to handle gaps in systemd updates
+fun refresh_callback ()
+  {
+    # Gradually move towards 100% even if system signals are slow
+    # Speed is roughly 1% every 0.1s (adjust if boot is too slow/fast)
+    if (global.progress < 0.98)
+      {
+        global.progress += 0.003; # Fine-tuned for Austral OS
+        update_ui();
+      }
+  }
+
+Plymouth.SetRefreshFunction(refresh_callback);
 
 # Smoothly hide elements on exit
 fun quit_callback ()
