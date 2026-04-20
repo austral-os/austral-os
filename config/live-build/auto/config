@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+lb config noauto \
+  --distribution trixie \
+  --architecture amd64 \
+  --binary-images iso-hybrid \
+  --debian-installer none \
+  --archive-areas "main contrib non-free non-free-firmware" \
+  --bootappend-live "boot=live components quiet splash loglevel=0 systemd.show_status=false rd.udev.log_level=0 vt.global_cursor_default=0"

@@ -1,0 +1,13 @@
+[Unit]
+Description=Horizon Session
+After=systemd-logind.service
+
+[Service]
+User=root
+PAMName=login
+Environment=XDG_RUNTIME_DIR=/run/user/0
+ExecStart=/usr/bin/start-horizon-session-labwc.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
