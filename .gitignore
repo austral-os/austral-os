@@ -26,6 +26,9 @@ config/live-build/chroot.*
 # generated config (IGNORE TODO)
 # =========================
 config/live-build/config/*
+!config/live-build/config/binary
+!config/live-build/config/bootloaders/
+!config/live-build/config/bootloaders/**
 
 # =========================
 # KEEP only what YOU define
@@ -39,12 +42,9 @@ config/live-build/config/*
 !config/live-build/config/includes.chroot/
 !config/live-build/config/includes.chroot/**
 
-# hooks → ignorar TODO
-config/live-build/config/hooks/*
-
-# permitir SOLO tu hook específico
-!config/live-build/config/hooks/live/
-!config/live-build/config/hooks/live/01-root-password.hook.chroot
+# hooks
+!config/live-build/config/hooks/
+!config/live-build/config/hooks/**
 
 # =========================
 # generic

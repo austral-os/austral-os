@@ -1,0 +1,2 @@
+#!/bin/sh
+dpkg -i /root/packages/horizon-desktop.deb || apt-get -f install -y
