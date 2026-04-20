@@ -15,9 +15,11 @@ Stage 0 — Project initialization
 
 ## Ejemplo
 
-copiar horizon-desktop.deb to config/live-build/packages.chroot/horizon-desktop.deb
+copy horizon-desktop.deb to config/live-build/config/includes.chroot/root/packages/horizon-desktop.deb
 
+```bash
 cd config/live-build
 sudo lb clean --all
 sudo lb config
 sudo lb build 2>&1 | tee build.log
+```
