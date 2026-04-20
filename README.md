@@ -21,5 +21,5 @@ copy horizon-desktop.deb to config/live-build/config/includes.chroot/root/packag
 cd config/live-build
 sudo lb clean --all
 sudo lb config
-sudo lb build 2>&1 | tee build.log
+sudo lb build
 ```

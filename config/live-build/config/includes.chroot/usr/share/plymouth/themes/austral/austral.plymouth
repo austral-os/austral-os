@@ -1,23 +1,8 @@
 [Plymouth Theme]
 Name=Austral OS
-Description=Minimalist dark theme with centered white logo.
-ModuleName=two-step
+Description=Minimalist dark theme with centered white logo and horizontal progress bar.
+ModuleName=script
 
-[two-step]
+[script]
 ImageDir=/usr/share/plymouth/themes/austral
-HorizontalAlignment=0.5
-VerticalAlignment=0.5
-Transition=fade
-TransitionDuration=0.5
-BackgroundStartColor=0x000000
-BackgroundEndColor=0x000000
-
-# Logo
-LogoHorizontalAlignment=0.5
-LogoVerticalAlignment=0.5
-
-# Progress Bar
-ProgressBarHorizontalAlignment=0.5
-ProgressBarVerticalAlignment=0.7
-ProgressBarWidth=300
-ProgressBarHeight=12
+ScriptFile=/usr/share/plymouth/themes/austral/austral.script

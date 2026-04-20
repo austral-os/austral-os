@@ -66,4 +66,7 @@ pipewire-pulse
 wireplumber
 alsa-utils
 libspa-0.2-modules
-libspa-0.2-bluetoothplymouth
+libspa-0.2-bluetooth
+plymouth
+plymouth-themes
+plymouth-label

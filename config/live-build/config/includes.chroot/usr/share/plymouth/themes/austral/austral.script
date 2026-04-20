@@ -1,0 +1,54 @@
+# austral.script - Custom boot splash for Austral OS
+
+# Set background to black
+Window.SetBackgroundTopColor(0, 0, 0);
+Window.SetBackgroundBottomColor(0, 0, 0);
+
+# Load and center logo
+logo.image = Image("logo.png");
+logo.sprite = Sprite(logo.image);
+
+logo.x = Window.GetWidth() / 2 - logo.image.GetWidth() / 2;
+logo.y = Window.GetHeight() / 2 - logo.image.GetHeight() / 2;
+logo.sprite.SetPosition(logo.x, logo.y, 1000);
+
+# Progress bar settings
+progress_bar.width = 300;
+progress_bar.height = 4;
+progress_bar.x = Window.GetWidth() / 2 - progress_bar.width / 2;
+progress_bar.y = logo.y + logo.image.GetHeight() + 50; # 50px below the logo
+
+# Load 1x1 blocks for the bar
+white_image = Image("white.png");
+grey_image = Image("grey.png");
+
+# Create progress bar background (grey box)
+progress_bar_bg.sprite = Sprite(grey_image.Scale(progress_bar.width, progress_bar.height));
+progress_bar_bg.sprite.SetPosition(progress_bar.x, progress_bar.y, 50);
+
+# Create progress bar foreground (white box)
+progress_bar.sprite = Sprite();
+progress_bar.sprite.SetPosition(progress_bar.x, progress_bar.y, 100);
+
+# Update bar width based on boot progress
+fun progress_callback (duration, progress)
+  {
+    if (progress > 0)
+      {
+        current_width = progress_bar.width * progress;
+        if (current_width < 1) current_width = 1;
+        progress_bar.sprite.SetImage(white_image.Scale(current_width, progress_bar.height));
+      }
+  }
+
+Plymouth.SetBootProgressFunction(progress_callback);
+
+# Smoothly hide elements on exit
+fun quit_callback ()
+{
+  logo.sprite.SetOpacity(0);
+  progress_bar.sprite.SetOpacity(0);
+  progress_bar_bg.sprite.SetOpacity(0);
+}
+
+Plymouth.SetQuitFunction(quit_callback);
