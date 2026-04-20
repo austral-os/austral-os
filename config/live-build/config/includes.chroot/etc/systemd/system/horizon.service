@@ -6,6 +6,7 @@ After=systemd-logind.service
 User=root
 PAMName=login
 Environment=XDG_RUNTIME_DIR=/run/user/0
+ExecStartPre=/usr/bin/audio-init.sh
 ExecStart=/usr/bin/start-horizon-session-labwc.sh
 Restart=always
 
