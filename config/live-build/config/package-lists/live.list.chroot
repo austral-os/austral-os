@@ -70,3 +70,12 @@ libspa-0.2-bluetooth
 plymouth
 plymouth-themes
 plymouth-label
+
+parted
+rsync
+dosfstools
+e2fsprogs
+udisks2
+util-linux
+grub-efi-amd64
+grub-common
