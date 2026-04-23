@@ -80,3 +80,6 @@ udisks2
 util-linux
 grub-efi-amd64
 grub-common
+
+htop
+fastfetch
