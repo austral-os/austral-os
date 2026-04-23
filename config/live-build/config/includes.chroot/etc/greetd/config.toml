@@ -1,0 +1,11 @@
+[terminal]
+# The VT to run the greeter on.
+vt = 1
+
+[default_session]
+# Añadimos WLR_RENDERER_ALLOW_SOFTWARE=1 para máquinas virtuales/drivers básicos
+# Añadimos la ruta completa para mayor seguridad
+command = "env WLR_RENDERER_ALLOW_SOFTWARE=1 labwc -s /usr/bin/horizon-greeter"
+
+# El usuario to run the greeter as
+user = "greeter"

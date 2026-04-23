@@ -1,0 +1,22 @@
+#!/bin/sh
+set -e
+
+# Crear el directorio de trabajo para el greeter
+mkdir -p /var/lib/greetd
+
+# Crear el usuario greeter si no existe
+if ! id "greeter" >/dev/null 2>&1; then
+    echo "P: Creating greeter user with home directory..."
+    # Se especifica el directorio personal para que greetd pueda cambiar a él
+    useradd -r -d /var/lib/greetd -G video,input -s /usr/sbin/nologin greeter
+else
+    # Si ya existe, asegurar que esté en los grupos y tenga el home configurado
+    usermod -aG video,input greeter
+    usermod -d /var/lib/greetd greeter
+fi
+
+# Asegurar que el greeter sea dueño de su home y de la configuración
+chown -R greeter:greeter /var/lib/greetd
+mkdir -p /etc/greetd
+chown -R greeter:greeter /etc/greetd
+chmod 755 /etc/greetd

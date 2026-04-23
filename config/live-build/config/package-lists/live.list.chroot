@@ -70,7 +70,7 @@ libspa-0.2-bluetooth
 plymouth
 plymouth-themes
 plymouth-label
-sddm
+greetd
 
 parted
 rsync
