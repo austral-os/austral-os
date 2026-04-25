@@ -13,6 +13,7 @@ libegl1
 libgl1-mesa-dri
 libgbm1
 
+shared-mime-info
 desktop-file-utils
 libliftoff0
 libvterm0
