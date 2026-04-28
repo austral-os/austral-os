@@ -83,5 +83,7 @@ util-linux
 grub-efi-amd64
 grub-common
 
+pkexec
 htop
 fastfetch
+upower
