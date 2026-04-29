@@ -9,19 +9,19 @@
   <img src="https://img.shields.io/badge/license-GPL--3.0-blue" alt="License GPL-3.0">
   <img src="https://img.shields.io/badge/base-Debian-red?logo=debian" alt="Base Debian">
   <img src="https://img.shields.io/badge/platform-Wayland-0055ff" alt="Platform Wayland">
-  <img src="https://img.shields.io/badge/built%20with-Horizon-purple" alt="Built with Horizon">
+  [![Built with Horizon](https://img.shields.io/badge/built%20with-Horizon-purple)](https://github.com/horizon-desktop/austral-os/horizon)
 </p>
 
-**A vertically integrated desktop system built on Debian, powered by the Horizon framework.**
+**A vertically integrated desktop system built on Debian, powered by the [Horizon framework](https://github.com/horizon-desktop/austral-os/horizon).**
 
-Austral OS is a minimal, Debian-based operating system designed with a single purpose: to provide a pure, vertically integrated environment for the **Horizon** desktop framework. Unlike traditional distributions that layer components from various ecosystems, Austral OS is an intentional system where the UI, core applications, and system integration are built to work as one.
+Austral OS is a minimal, Debian-based operating system designed with a single purpose: to provide a pure, vertically integrated environment for the [**Horizon**](https://github.com/horizon-desktop/austral-os/horizon) desktop framework. Unlike traditional distributions that layer components from various ecosystems, Austral OS is an intentional system where the UI, core applications, and system integration are built to work as one.
 
 ---
 
 ## 🖼️ Preview
 
 ![Austral OS Desktop](images/screenshot1.png)  
-_Main desktop view showcasing the Horizon Shell and native applications._
+_Main desktop view showcasing the [Horizon Shell](https://github.com/horizon-desktop/austral-os/horizon) and native applications._
 
 ---
 
@@ -31,7 +31,7 @@ Austral OS is currently in **Alpha state**.
 
 - **Expect bugs:** The system is functional but unstable.
 - **Incomplete features:** Many settings and system components are still under development.
-- **Developer-focused:** This is currently intended for developers, testers, and those curious about the Horizon framework.
+- **Developer-focused:** This is currently intended for developers, testers, and those curious about the [Horizon framework](https://github.com/horizon-desktop/austral-os/horizon).
 
 **Do not use this as your primary operating system yet.**
 
@@ -42,7 +42,7 @@ Austral OS is currently in **Alpha state**.
 Austral OS is not intended to be another general-purpose distribution. Instead, it serves as a reference implementation of a desktop environment built around simplicity, control, and a fully integrated UI stack.
 
 - **Base:** Built on a minimal Debian foundation for stability and package availability.
-- **No GTK / No Qt:** The entire user interface is built using the **Horizon** framework, ensuring a lightweight and consistent experience.
+- **No GTK / No Qt:** The entire user interface is built using the [**Horizon** framework](https://github.com/horizon-desktop/austral-os/horizon), ensuring a lightweight and consistent experience.
 - **Full Control:** By building the stack from the UI framework up to the shell, we maintain absolute control over the user experience and system performance.
 - **Refined Aesthetics:** The interface draws inspiration from classic macOS releases (such as Mavericks and Leopard), reinterpreted within a modern Wayland-based Linux system.
 
@@ -50,9 +50,9 @@ Austral OS is not intended to be another general-purpose distribution. Instead, 
 
 ## What’s Included?
 
-The system comes pre-loaded with a suite of core applications, all built natively with the Horizon framework:
+The system comes pre-loaded with a suite of core applications, all built natively with the [Horizon framework](https://github.com/horizon-desktop/austral-os/horizon):
 
-- **Horizon Shell:** A modern Wayland-based panel, dock, and workspace manager.
+- **[Horizon Shell](https://github.com/horizon-desktop/austral-os/horizon):** A modern Wayland-based panel, dock, and workspace manager.
 - **Nova Browser:** A custom web browser optimized for the system.
 - **File Manager:** A simple, fast explorer for your data.
 - **Terminal:** Low-latency terminal emulator.
@@ -67,7 +67,7 @@ The modern Linux desktop is often a patchwork of different libraries, design lan
 
 1. **Consistency:** Every pixel is drawn by the same framework.
 2. **Efficiency:** By removing the overhead of generic toolkits, we achieve a faster, more responsive UI.
-3. **Simplicity:** We only include what is necessary to run the Horizon experience.
+3. **Simplicity:** We only include what is necessary to run the [Horizon experience](https://github.com/horizon-desktop/austral-os/horizon).
 
 ---
 
@@ -104,11 +104,11 @@ The resulting `.iso` file can be flashed to a USB drive or booted in a virtual m
 
 ---
 
-## Relation to Horizon
+## Relation to [Horizon](https://github.com/horizon-desktop/austral-os/horizon)
 
-Austral OS is the official reference platform for the [Horizon UI Framework](https://github.com/horizon-desktop/horizon). While Horizon can technically run on other systems, Austral OS is where it is designed to shine.
+Austral OS is the official reference platform for the [Horizon UI Framework](https://github.com/horizon-desktop/austral-os/horizon). While [Horizon](https://github.com/horizon-desktop/austral-os/horizon) can technically run on other systems, Austral OS is where it is designed to shine.
 
-If you are a developer looking to build apps for Horizon, this is your testing ground.
+If you are a developer looking to build apps for [Horizon](https://github.com/horizon-desktop/austral-os/horizon), this is your testing ground.
 
 ---
 
@@ -122,4 +122,4 @@ This project is currently developed by a single developer. Feedback, bug reports
 
 ---
 
-**Built with passion. Driven by Horizon.**
+**Built with passion. Driven by [Horizon](https://github.com/horizon-desktop/austral-os/horizon).**
