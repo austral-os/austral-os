@@ -71,14 +71,20 @@ The modern Linux desktop is often a patchwork of different libraries, design lan
 
 ---
 
-## 🛠️ How to Try It
+## 🛠️ Download & Try
 
-Currently, Austral OS is distributed as a buildable ISO project using `live-build`.
+Download the latest ISO from the releases page:
+
+👉 https://github.com/austral-os/austral-os/releases/tag/v0.1.0-alpha
+
+## 🛠️ Build from Source
+
+If you want to modify or rebuild Austral OS, you can generate the ISO using `live-build`.
 
 ### Prerequisites
 
-- A Debian-based host system.
-- `live-build` installed.
+- A Debian-based host system
+- `live-build` installed
 
 ### Build Instructions
 
