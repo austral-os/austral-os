@@ -9,7 +9,9 @@
   <img src="https://img.shields.io/badge/license-GPL--3.0-blue" alt="License GPL-3.0">
   <img src="https://img.shields.io/badge/base-Debian-red?logo=debian" alt="Base Debian">
   <img src="https://img.shields.io/badge/platform-Wayland-0055ff" alt="Platform Wayland">
-  [![Built with Horizon](https://img.shields.io/badge/built%20with-Horizon-purple)](https://github.com/horizon-desktop/austral-os/horizon)
+  <a href="https://github.com/horizon-desktop/austral-os/horizon">
+    <img src="https://img.shields.io/badge/built%20with-Horizon-purple" alt="Built with Horizon">
+  </a>
 </p>
 
 **A vertically integrated desktop system built on Debian, powered by the [Horizon framework](https://github.com/horizon-desktop/austral-os/horizon).**
