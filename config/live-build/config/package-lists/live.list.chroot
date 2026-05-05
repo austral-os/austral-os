@@ -103,3 +103,6 @@ libmp3lame0
 brightnessctl
 acpid
 acpi-support
+pulseaudio-utils
+playerctl
+
