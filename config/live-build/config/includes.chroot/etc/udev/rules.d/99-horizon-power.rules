@@ -1,0 +1,1 @@
+ACTION=="add|change", SUBSYSTEM=="power_supply", KERNEL=="BAT*", RUN+="/bin/chmod 0666 %S%p/charge_control_start_threshold %S%p/charge_control_end_threshold %S%p/charge_start_threshold %S%p/charge_stop_threshold"
