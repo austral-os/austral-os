@@ -99,6 +99,7 @@ libcairo2
 libswresample5
 libx264-164
 libmp3lame0
+libmpv2
 
 brightnessctl
 acpid
