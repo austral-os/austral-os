@@ -101,9 +101,13 @@ libx264-164
 libmp3lame0
 libmpv2
 
+power-profiles-daemon
 brightnessctl
 acpid
 acpi-support
 pulseaudio-utils
 playerctl
+libpam0g
+
+libproc2-0
 
