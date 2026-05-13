@@ -111,3 +111,8 @@ libpam0g
 
 libproc2-0
 
+gvfs
+gvfs-backends
+gvfs-fuse
+samba-common
+cifs-utils
