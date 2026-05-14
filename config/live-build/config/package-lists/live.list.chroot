@@ -116,3 +116,6 @@ gvfs-backends
 gvfs-fuse
 samba-common
 cifs-utils
+libsecret-1-0
+libsecret-tools
+dbus-user-session
