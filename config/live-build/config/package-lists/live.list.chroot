@@ -119,3 +119,8 @@ cifs-utils
 libsecret-1-0
 libsecret-tools
 dbus-user-session
+
+zip
+unzip
+tar
+p7zip-full
