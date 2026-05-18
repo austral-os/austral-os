@@ -20,3 +20,8 @@ chown -R greeter:greeter /var/lib/greetd
 mkdir -p /etc/greetd
 chown -R greeter:greeter /etc/greetd
 chmod 755 /etc/greetd
+
+# Asegurar permisos de ejecución en los scripts del compositor y monitoreo
+chmod +x /usr/bin/horizon-set-compositor
+chmod +x /usr/bin/horizon-greeter-monitor.sh
+
