@@ -1,21 +1,16 @@
 #!/bin/bash
 
-# Start PipeWire and Wireplumber in the background
-# Since we are running as root with XDG_RUNTIME_DIR set, 
-# we can launch them directly.
-pipewire &
-pipewire-pulse &
-wireplumber &
-
-# Wait a moment for them to initialize
-sleep 2
-
-# Unmute ALSA channels
-amixer sset Master unmute 2>/dev/null
-amixer sset Master 100% 2>/dev/null
-amixer sset Speaker unmute 2>/dev/null
-amixer sset Speaker 100% 2>/dev/null
-amixer sset Headphone unmute 2>/dev/null
-amixer sset Headphone 100% 2>/dev/null
+# Unmute ALSA channels only if we are in a live environment.
+# Installed systems should rely on alsa-restore.service to keep volume levels.
+if [ -d /run/live ] || grep -q boot=live /proc/cmdline; then
+    # Wait a moment for ALSA to be fully initialized
+    sleep 2
+    amixer sset Master unmute 2>/dev/null
+    amixer sset Master 100% 2>/dev/null
+    amixer sset Speaker unmute 2>/dev/null
+    amixer sset Speaker 100% 2>/dev/null
+    amixer sset Headphone unmute 2>/dev/null
+    amixer sset Headphone 100% 2>/dev/null
+fi
 
 exit 0
