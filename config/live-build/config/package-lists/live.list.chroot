@@ -124,3 +124,5 @@ zip
 unzip
 tar
 p7zip-full
+
+systemd-timesyncd
