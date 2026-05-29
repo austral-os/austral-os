@@ -38,6 +38,8 @@ libwf-utils0t64
 libwpewebkit-2.0-1
 
 xdg-dbus-proxy
+xdg-desktop-portal
+xdg-desktop-portal-gtk
 
 libfreerdp-server3-3
 libfreerdp3-3
