@@ -4,8 +4,9 @@ vt = 1
 
 [default_session]
 # Añadimos WLR_RENDERER_ALLOW_SOFTWARE=1 para máquinas virtuales/drivers básicos
+# Añadimos WLR_NO_HARDWARE_CURSORS=1 para solucionar glitches gráficos en virtio-gpu con QEMU/KVM
 # Añadimos la ruta completa para mayor seguridad
-command = "env WLR_RENDERER_ALLOW_SOFTWARE=1 labwc -s /usr/bin/horizon-greeter"
+command = "env WLR_NO_HARDWARE_CURSORS=1 WLR_RENDERER_ALLOW_SOFTWARE=1 labwc -s /usr/bin/horizon-greeter"
 
 # El usuario to run the greeter as
 user = "greeter"
