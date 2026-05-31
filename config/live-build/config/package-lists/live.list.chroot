@@ -129,6 +129,7 @@ tar
 p7zip-full
 
 systemd-timesyncd
+systemd-resolved
 
 cups
 cups-client
