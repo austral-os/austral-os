@@ -129,3 +129,9 @@ tar
 p7zip-full
 
 systemd-timesyncd
+
+cups
+cups-client
+libcups2t64
+cups-filters
+avahi-daemon
