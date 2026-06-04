@@ -16,7 +16,7 @@ echo "$COMPOSITOR" > /etc/horizon/compositor.conf
 if [ -f /etc/greetd/config.toml ]; then
     if [ "$COMPOSITOR" = "meteor" ]; then
         # Cambiar el greeter para que se inicie sobre Meteor (delimitando a default_session de forma robusta)
-        sed -i '/\[default_session\]/,/^$/ { s|command = ".*"|command = "env WLR_RENDERER_ALLOW_SOFTWARE=1 meteor -c /etc/horizon/meteor-greeter.ini"| }' /etc/greetd/config.toml
+        sed -i '/\[default_session\]/,/^$/ { s|command = ".*"|command = "env WLR_NO_HARDWARE_CURSORS=1 WLR_RENDERER_ALLOW_SOFTWARE=1 meteor -c /etc/horizon/meteor-greeter.ini"| }' /etc/greetd/config.toml
     else
         # Cambiar el greeter para que se inicie sobre Labwc (delimitando a default_session de forma robusta)
         sed -i '/\[default_session\]/,/^$/ { s|command = ".*"|command = "env WLR_RENDERER_ALLOW_SOFTWARE=1 labwc -s /usr/bin/horizon-greeter"| }' /etc/greetd/config.toml

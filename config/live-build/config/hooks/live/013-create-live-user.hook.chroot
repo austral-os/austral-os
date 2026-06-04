@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Este script se ejecuta en el chroot durante la construcción de la ISO
+echo "I: Creating live user 'austral'"
+
+# Crear usuario 'austral'
+useradd -m -s /bin/bash -G sudo,video,audio,input,plugdev,netdev,render austral
+
+# Eliminar contraseña para permitir inicio de sesión automático y sudo sin contraseña
+passwd -d austral
+
+# Asegurar permisos correctos para el archivo sudoers (sudo lo ignora si no es 0440 y root:root)
+if [ -f /etc/sudoers.d/austral-live ]; then
+    chown root:root /etc/sudoers.d/austral-live
+    chmod 0440 /etc/sudoers.d/austral-live
+fi
+
+# Configurar auto-inicio de la sesión gráfica en TTY1
+cat << 'EOF' > /home/austral/.bash_profile
+if [ -z "$WAYLAND_DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+    # Iniciar la sesión con dbus-run-session
+    exec dbus-run-session /usr/bin/start-horizon-session-meteor.sh
+fi
+EOF
+chown austral:austral /home/austral/.bash_profile
