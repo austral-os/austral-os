@@ -1,2 +1,0 @@
-#!/bin/sh
-dpkg -i /root/packages/*.deb || apt-get -f install -y

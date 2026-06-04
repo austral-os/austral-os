@@ -8,4 +8,4 @@ while pgrep -u greeter horizon-greeter >/dev/null; do
 done
 
 # El greeter ha finalizado, terminar el compositor de forma limpia para el usuario greeter
-pkill -u greeter wayfire
+pkill -u greeter meteor

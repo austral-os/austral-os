@@ -9,7 +9,7 @@ PAMName=login
 Environment=XDG_RUNTIME_DIR=/run/user/0
 Environment=WLR_RENDERER_ALLOW_SOFTWARE=1
 ExecStartPre=/usr/bin/audio-init.sh
-ExecStart=/usr/bin/dbus-run-session /usr/bin/start-horizon-session-labwc.sh
+ExecStart=/usr/bin/dbus-run-session /usr/bin/start-horizon-session-meteor.sh
 # Quit Plymouth on exit
 ExecStartPost=/usr/bin/bash -c "sleep 3 && /usr/bin/plymouth quit"
 

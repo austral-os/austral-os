@@ -20,21 +20,18 @@ libliftoff0
 libvterm0
 libwoff1
 
-wayfire
+meteor
 labwc
-wayfire-plugin-winshadows
 
 libneatvnc0
 libwpe-1.0-1
 
 libseat1
-libwf-config1
 libwpebackend-fdo-1.0-1
 wlr-randr
 
 libaml0t64
 libsfdo0
-libwf-utils0t64
 libwpewebkit-2.0-1
 
 xdg-dbus-proxy
@@ -48,7 +45,6 @@ libturbojpeg0
 
 libxcb-errors0
 liburiparser1
-libwlroots-0.18
 libxcb-ewmh2
 
 network-manager

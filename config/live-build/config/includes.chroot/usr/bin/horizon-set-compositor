@@ -3,8 +3,8 @@ set -e
 
 COMPOSITOR=$1
 
-if [ "$COMPOSITOR" != "labwc" ] && [ "$COMPOSITOR" != "wayfire" ]; then
-    echo "Uso: $0 [labwc|wayfire]"
+if [ "$COMPOSITOR" != "labwc" ] && [ "$COMPOSITOR" != "meteor" ]; then
+    echo "Uso: $0 [labwc|meteor]"
     exit 1
 fi
 
@@ -14,9 +14,9 @@ echo "$COMPOSITOR" > /etc/horizon/compositor.conf
 
 # 2. Actualizar la configuración de greetd (Gestor de Acceso)
 if [ -f /etc/greetd/config.toml ]; then
-    if [ "$COMPOSITOR" = "wayfire" ]; then
-        # Cambiar el greeter para que se inicie sobre Wayfire (delimitando a default_session de forma robusta)
-        sed -i '/\[default_session\]/,/^$/ { s|command = ".*"|command = "env WLR_RENDERER_ALLOW_SOFTWARE=1 wayfire -c /etc/horizon/wayfire-greeter.ini"| }' /etc/greetd/config.toml
+    if [ "$COMPOSITOR" = "meteor" ]; then
+        # Cambiar el greeter para que se inicie sobre Meteor (delimitando a default_session de forma robusta)
+        sed -i '/\[default_session\]/,/^$/ { s|command = ".*"|command = "env WLR_RENDERER_ALLOW_SOFTWARE=1 meteor -c /etc/horizon/meteor-greeter.ini"| }' /etc/greetd/config.toml
     else
         # Cambiar el greeter para que se inicie sobre Labwc (delimitando a default_session de forma robusta)
         sed -i '/\[default_session\]/,/^$/ { s|command = ".*"|command = "env WLR_RENDERER_ALLOW_SOFTWARE=1 labwc -s /usr/bin/horizon-greeter"| }' /etc/greetd/config.toml
@@ -25,8 +25,8 @@ fi
 
 # 3. Actualizar la configuración de systemd (Sesión con Inicio Automático)
 if [ -f /etc/systemd/system/horizon.service ]; then
-    if [ "$COMPOSITOR" = "wayfire" ]; then
-        sed -i 's|^ExecStart=.*|ExecStart=/usr/bin/start-horizon-session-wayfire.sh|' /etc/systemd/system/horizon.service
+    if [ "$COMPOSITOR" = "meteor" ]; then
+        sed -i 's|^ExecStart=.*|ExecStart=/usr/bin/start-horizon-session-meteor.sh|' /etc/systemd/system/horizon.service
     else
         sed -i 's|^ExecStart=.*|ExecStart=/usr/bin/start-horizon-session-labwc.sh|' /etc/systemd/system/horizon.service
     fi
