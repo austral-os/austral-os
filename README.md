@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/emblem-austral.png" width="128" alt="Austral OS Logo">
+  <img src="images/emblem-austral.png" width="256" alt="Austral OS Logo">
 </p>
 
 # Austral OS
