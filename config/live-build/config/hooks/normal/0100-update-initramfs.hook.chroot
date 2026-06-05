@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+
+echo "Generating initramfs for all installed kernels..."
+update-initramfs -c -k all || update-initramfs -u -k all
