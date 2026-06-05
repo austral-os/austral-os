@@ -1,0 +1,12 @@
+[Unit]
+Description=Update Horizon Memory Information on Boot
+After=local-fs.target
+Before=display-manager.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c '/usr/sbin/dmidecode -t memory > /usr/share/horizon/memory'
+ExecStartPre=/bin/mkdir -p /usr/share/horizon
+
+[Install]
+WantedBy=multi-user.target
