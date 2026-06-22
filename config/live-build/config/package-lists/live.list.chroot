@@ -133,3 +133,7 @@ libcups2t64
 cups-filters
 avahi-daemon
 dmidecode
+
+fonts-noto-color-emoji
+fonts-noto-core
+fonts-noto-extra
