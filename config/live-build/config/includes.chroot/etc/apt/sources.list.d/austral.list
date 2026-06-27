@@ -1,1 +1,1 @@
-deb [signed-by=/usr/share/keyrings/austral.gpg] http://repo-austral-os.hdrdevs.com.ar/ stable main
+deb [arch=amd64 signed-by=/usr/share/keyrings/austral.gpg] http://repo-austral-os.hdrdevs.com.ar/ stable main
